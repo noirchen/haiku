@@ -1,0 +1,49 @@
+%!TEX root = haiku.tex
+
+\setlength{\headheight}{15pt}
+\newcounter{haikucounter}
+\renewcommand{\thehaikucounter}{\arabic{haikucounter}}
+
+\newenvironment{haiku}{
+    \refstepcounter{haikucounter}
+    \centering\thehaikucounter\\[1ex]\begin{parse lines}{##1\newline}
+    }%
+    {\end{parse lines}}
+
+\setcounter{secnumdepth}{-1}
+\setcounter{tocdepth}{1}
+
+% \newfontfamily\fontfamilyname{Times}
+% \setmainfont{Times}
+\newfontfamily{\FS}[Scale=MatchLowercase,Path=fonts/]{NotoSerifCJKsc-Regular.otf}
+% \newfontfamily{\FS}[Scale=MatchLowercase,Path=fonts/]{NotoSerifCJKsc-Regular.otf}
+\newfontfamily{\FK}[Scale=MatchUppercase,Path=fonts/]{kaiti.ttf}
+\newfontfamily{\FT}[Scale=MatchLowercase,Path=fonts/]{fangsong.otf}
+\newfontfamily{\FF}[Path=fonts/]{HanyiSentyVimalkirti.ttf} % 汉仪新蒂维摩诘经体
+% \newfontfamily{\FH}[Scale=MatchUppercase,Path=fonts/]{kyoukasho.otf} % 教科書体
+\newfontfamily{\FH}[Scale=MatchUppercase,Path=fonts/]{NotoSerifCJKjp-SemiBold.otf}
+\newfontfamily{\FM}[Scale=MatchUppercase,Path=fonts/]{NotoSerifCJKjp-Regular.otf}
+
+\graphicspath{{figures/}}
+
+\renewcommand{\rubysize}{0.5}
+\renewcommand{\rubysep}{0em}
+\renewcommand{\contentsname}{\FK 目录}
+\renewcommand{\bookname}{}
+
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\defaultfontfeatures{Mapping=tex-text}
+% Chinese indent
+\makeatletter
+\let\@afterindentfalse\@afterindenttrue
+\@afterindenttrue
+\makeatother
+\setlength{\parindent}{2em}
+
+\setlength{\footnotemargin}{1em}
+\renewcommand{\hangfootparskip}{0pt}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+\definecolor{fondpaille}{RGB}{230,230,207}
+\pagecolor{fondpaille}
