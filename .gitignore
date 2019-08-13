@@ -3,8 +3,7 @@ fonts/
 books/
 
 
-# Compiled source #
-###################
+# Compiled source
 *.xdv
 *.aux
 *.bbl
@@ -16,3 +15,5 @@ books/
 *.out
 *.synctex.gz
 *.toc
+.DS_Store
+.gitignore
