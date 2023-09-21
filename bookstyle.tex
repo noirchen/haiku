@@ -7,8 +7,8 @@
 \newenvironment{haiku}{
     \refstepcounter{haikucounter}
     \centering\thehaikucounter\\[1ex]\begin{parse lines}{##1\newline}
-    }%
-    {\end{parse lines}}
+}%
+{\end{parse lines}}
 
 \setcounter{secnumdepth}{-1}
 \setcounter{tocdepth}{1}
@@ -42,6 +42,7 @@
 \setlength{\footnotemargin}{1em}
 \renewcommand{\hangfootparskip}{0pt}
 \renewcommand{\thefootnote}{\arabic{footnote}}
+\renewcommand\thefootnote{\ding{\numexpr171+\value{footnote}}}
 
 \definecolor{fondpaille}{RGB}{230,230,207}
 \pagecolor{fondpaille}
