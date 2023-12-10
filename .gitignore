@@ -1,6 +1,6 @@
 # Don't track content of these folders
-fonts/
-books/
+fonts/*
+books/*
 
 
 # Compiled source
